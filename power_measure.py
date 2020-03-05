@@ -1,4 +1,4 @@
-import visa
+import pyvisa as visa
 from ThorlabsPM100 import ThorlabsPM100
 import sqlite3
 import time
@@ -15,7 +15,7 @@ class DBConnection:
     """
 
     def __init__(self):
-        self.conn = sqlite3.connect('pd.db', isolation_level=None)
+        self.conn = sqlite3.connect('pd_test.db', isolation_level=None)
         self.cursor = self.conn.cursor()
 
     def __del__(self):
