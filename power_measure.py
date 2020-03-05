@@ -24,10 +24,7 @@ class DBConnection:
     def get_group_id(self):
         self.cursor.execute(self.Read_Group_Id)
         group_id_tuple = self.cursor.fetchone()
-        if group_id_tuple[0] is not None:
-            return group_id_tuple[0]
-        else:
-            return 0
+        return group_id_tuple[0] if group_id_tuple[0] is not None else 0
 
     def save_power_value(self, power_value, group_id):
         self.cursor.execute(self.Insert_Power_Value, (power_value, group_id))
@@ -61,7 +58,10 @@ def main():
     print('Enter the step size in second:')
     step_size = input('>> ')
 
-    read_machine(int(duration), int(step_size))
+    try:
+        read_machine(int(duration), int(step_size))
+    except ValueError:
+        print("Total time and time step need to be integer.")
 
 
 if __name__ == '__main__':
