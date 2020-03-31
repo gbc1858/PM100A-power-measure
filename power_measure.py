@@ -52,7 +52,7 @@ def read_machine(duration: int, step_size: int):
 
 
 def main():
-    print('Enter the desired running time in seconds:')
+    print('Enter the desired running time in second:')
     duration = input('>> ')
 
     print('Enter the step size in second:')
