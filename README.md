@@ -13,9 +13,9 @@ $ pip3 install -r requirements.txt
 Follow the instructions below to measure the power of a light source,
 ```shell
 $ python3 power_measure.py
-> Enter the desired running time in second:
-> >> 
-> Enter the step size in second:
-> >> 
+Enter the desired running time in second:
+>> 
+Enter the step size in second:
+>> 
 
 ```
