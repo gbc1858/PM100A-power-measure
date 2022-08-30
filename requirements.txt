@@ -4,5 +4,5 @@ idna==2.9
 PyVISA==1.10.1
 requests==2.23.0
 ThorlabsPM100==1.1.2
-urllib3==1.25.8
+urllib3==1.26.5
 visa==1.0.0
